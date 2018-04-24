@@ -12,6 +12,7 @@
   "dependencies": {
     "element-ui": "^2.3.6",
     "vue": "^2.5.2",
+    "vue-d3": "^0.1.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -27,6 +28,7 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "d3": "^5.1.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",

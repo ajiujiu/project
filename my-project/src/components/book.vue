@@ -4,7 +4,7 @@
       <div class="book_header">
         <p>Advanced Quantitative</p>
         <p>Political Methodology</p>
-        <button>Learn</button>
+        <button @click="tableshow">Learn</button>
       </div>
       <el-input
         placeholder="请输入要学习章节"
@@ -20,14 +20,19 @@
         ref="tree2">
       </el-tree>
     </div>
-    <div class="map">
-      <p>这里是地图</p>
-    </div>
+    <bookmap v-show="ismap"></bookmap>
+    <bookpdf v-show="!ismap"></bookpdf>
   </div>
 </template>
 
 <script>
+import bookpdf from './pdf'
+import bookmap from './map'
 export default {
+  components: {
+    bookmap,
+    bookpdf
+  },
   watch: {
     filterText(val) {
       this.$refs.tree2.filter(val);
@@ -35,6 +40,7 @@ export default {
   },
   data() {
     return {
+      ismap:true,
       filterText: '',
       data2: [{
         id: '1',
@@ -85,6 +91,9 @@ export default {
     },
     handleNodeClick(data) {
       console.log(data.id);
+    },
+    tableshow () {
+    this.ismap = !this.ismap
     }
   }
 }
@@ -118,6 +127,7 @@ export default {
 }
 .book_list {
   background-color: #eae5e5;
+  width: 350px;
 }
 .book_header {
   font-family: inherit;
