@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="header">
-      <p class="header_left_one">BOOC.IO</p>
-      <a class="header_left_two">IEEE Vis 2016论文</a>
+      <p class="header_left_one" @click="App">BOOC.IO</p>
+      <a class="header_left_two" @click="App">IEEE Vis 2016论文</a>
         <a class="header_right_two">Feedback</a>
         <a class="header_right_one">Log In /Sign UP</a>
     </div>
@@ -12,7 +12,11 @@
 
 <script>
 export default {
-  name: 'App'
+  methods: {
+    App () {
+      this.$router.push({ path: '/' })
+    }
+  }
 }
 </script>
 
