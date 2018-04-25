@@ -8,7 +8,7 @@
       </iframe>
     </div>
     <div class="main_text">
-      <p class="main_text_h1" @click="app"> {{ main_h1 }}</p>
+      <p class="main_text_h1"> {{ main_h1 }}</p>
       <div class="main_text_index">
         <div class="main_text_index_left">
           <p>{{ main_name }}</p>
@@ -42,9 +42,6 @@ export default {
   methods: {
     tabBook () {
       this.$router.push({path:'/book'})
-    },
-    app () {
-      this.$router.push({path:'/'})
     }
   }
 }

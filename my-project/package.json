@@ -12,7 +12,7 @@
   "dependencies": {
     "element-ui": "^2.3.6",
     "vue": "^2.5.2",
-    "vue-d3": "^0.1.0",
+    "vue-pdf": "^3.2.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
