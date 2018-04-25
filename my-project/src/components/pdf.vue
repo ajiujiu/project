@@ -14,6 +14,7 @@
         <el-button  @click="rotate -= 90">&#x27F2;</el-button>
       <el-button type="info" @click="$refs.pdf.print()">打印</el-button>
     </div>
+    <!-- 这里是显示pdf的地方 --> 
 		<div class="showpdf">
 			<pdf v-if="show" ref="pdf" :src="src" class="pdfbook" :page="page" :rotate="rotate" @password="password" @progress="loadedRatio = $event" @error="error" @num-pages="numPages = $event"></pdf>
 		</div>

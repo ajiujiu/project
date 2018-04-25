@@ -1,5 +1,6 @@
 <template>
   <div id="main">
+    <!-- 这里是YouTube视频插件 -->
     <div class="video">
       <iframe
       class="teaser-video" type="text/html" 
@@ -7,13 +8,15 @@
       frameborder="0">
       </iframe>
     </div>
+    <!-- 这里是说明文件 -->
     <div class="main_text">
       <p class="main_text_h1"> {{ main_h1 }}</p>
       <div class="main_text_index">
         <div class="main_text_index_left">
           <p>{{ main_name }}</p>
           <p>{{ main_text }}</p>
-          <button @click="tabBook">
+          <!-- 跳转路由按钮 -->
+          <button @click="tabBook">  
             {{ open }}
           </button>
         </div>
@@ -41,13 +44,14 @@ export default {
   },
   methods: {
     tabBook () {
+      // 将路由指向book页面
       this.$router.push({path:'/book'})
     }
   }
 }
 </script>
-
 <style scoped>
+/* scoped是这里的css是独立样式的意思 */
 #main {
   width: 100%;
   height: 100%;

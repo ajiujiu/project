@@ -1,15 +1,18 @@
 <template>
   <div id="book">
     <div class="book_list">
+      <!-- 这里是说明文字 -->
       <div class="book_header">
         <p>Advanced Quantitative</p>
         <p>Political Methodology</p>
         <button @click="tableshow">Learn</button>
       </div>
+      <!-- 这里是侧边栏组件  搜索 -->
       <el-input
         placeholder="请输入要学习章节"
         v-model="filterText">
       </el-input>
+      <!-- 这里是侧边栏组件树 -->
       <el-tree 
         class="filter-tree"
         :data="data2"
@@ -20,6 +23,7 @@
         ref="tree2">
       </el-tree>
     </div>
+     <!-- 这里是组件 默认显示bookmap 由ismap控制 点击上面的按钮 Learn 切换都pdf组件  -->
     <bookmap v-show="ismap"></bookmap>
     <bookpdf v-show="!ismap"></bookpdf>
   </div>
